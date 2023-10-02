@@ -9,7 +9,7 @@
 ; You can make Calva auto-select this.
 ;   - See https://calva.io/connect-sequences/
 ; 
-; Using host:port localhost:57789 ...
+; Using host:port localhost:50417 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -35,5 +35,5 @@ nil
 cljs꞉user-activate꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 cljs꞉user-activate꞉> 
-; Could not resolve symbol: i/to_csv
-clj꞉solar-system.core꞉> 
+#object[VV planets.planets.planet]
+clj꞉planets.planets꞉> 

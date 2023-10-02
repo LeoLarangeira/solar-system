@@ -1,8 +1,16 @@
-Mercury,4880,3.3E23,3.7,0.39,58.6,88,0,"Caloris Basin,Scarps,Craters",Test
-Venus,12104,4.9E24,8.87,0.72,243,225,0,"Volcanic plains,Mountains,Impact craters",Test
-Earth,12742,5.97E24,9.81,1,24,365.25,1,"Nitrogen,Oxygen,Trace Gases",test
-Mars,6779,6.42E23,3.71,1.52,1.03,687,2,"Olympus Mons,Valles Marineris,Polar ice caps",
-Jupiter,139820,1.9E27,24.79,5.2,0.41,4333,79,"Great Red Spot,Jupiter's rings,Galilean moons",
-Saturn,116460,5.7E26,10.44,9.58,0.45,10759,83,"Saturn's rings,Cassini Division,Titan's lakes",
-Uranus,50724,8.7E25,8.69,19.22,0.72,30687,27,"Uranus's axial tilt,Rings of Uranus",
-Neptune,49244,1.02E26,11.15,30.05,0.67,60190,14,"Great Dark Spot,Neptune's rings",
+1,Mercury,4880,3.3E23,3.7,0.39,58.6,88,0,"Caloris Basin,Scarps,Craters",Test
+2,Venus,12104,4.9E24,8.87,0.72,243,225,0,"Volcanic plains,Mountains,Impact craters",Test
+3,Earth,12742,5.97E24,9.81,1,24,365.25,1,"Nitrogen,Oxygen,Trace Gases",test
+4,Mars,6779,6.42E23,3.71,1.52,1.03,687,2,"Olympus Mons,Valles Marineris,Polar ice caps",
+5,Jupiter,139820,1.9E27,24.79,5.2,0.41,4333,79,"Great Red Spot,Jupiter's rings,Galilean moons",
+6,Saturn,116460,5.7E26,10.44,9.58,0.45,10759,83,"Saturn's rings,Cassini Division,Titan's lakes",
+7,Uranus,50724,8.7E25,8.69,19.22,0.72,30687,27,"Uranus's axial tilt,Rings of Uranus",
+8,Neptune,49244,1.02E26,11.15,30.05,0.67,60190,14,"Great Dark Spot,Neptune's rings",
+1,Mercury,4880,3.3E23,3.7,0.39,58.6,88,0,"Caloris Basin,Scarps,Craters",Test
+2,Venus,12104,4.9E24,8.87,0.72,243,225,0,"Volcanic plains,Mountains,Impact craters",Test
+3,Earth,12742,5.97E24,9.81,1,24,365.25,1,"Nitrogen,Oxygen,Trace Gases",test
+4,Mars,6779,6.42E23,3.71,1.52,1.03,687,2,"Olympus Mons,Valles Marineris,Polar ice caps",
+5,Jupiter,139820,1.9E27,24.79,5.2,0.41,4333,79,"Great Red Spot,Jupiter's rings,Galilean moons",
+6,Saturn,116460,5.7E26,10.44,9.58,0.45,10759,83,"Saturn's rings,Cassini Division,Titan's lakes",
+7,Uranus,50724,8.7E25,8.69,19.22,0.72,30687,27,"Uranus's axial tilt,Rings of Uranus",
+8,Neptune,49244,1.02E26,11.15,30.05,0.67,60190,14,"Great Dark Spot,Neptune's rings",

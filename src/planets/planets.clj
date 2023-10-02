@@ -3,7 +3,9 @@
 
 
 (defrecord planet
-           [name ; String
+           [
+            id ; int
+            name ; String
             diameter ; Double km
             mass ; Double kg
             gravity ; Double m/s^2
@@ -14,5 +16,6 @@
             geographic-features ; vec de string
             fun-facts ; vec de string
             ])
+            
 
 
