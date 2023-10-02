@@ -2,7 +2,8 @@
   (:gen-class)
    (:require [planets.planets :as planets]
              [utils.inserts :as i]
-             [utils.read :as r]))
+             [utils.read :as r]
+             [utils.site :as site]))
 
 
 ;; definindo o nome do arquivo 
@@ -19,6 +20,9 @@
 
 (defn -main 
   []
-  (i/to_csv filename [mercury venus earth mars jupiter saturn uranus neptune])
-  (println (r/read-csv filename))
+  ;(i/to_csv filename [mercury venus earth mars jupiter saturn uranus neptune]) 
+  (def planet-data (r/read-csv filename))
+  (def planets (map r/planet-map (rest planet-data)))
+  (r/planet-search planets 2)
+  (println (site/open_site (site/site_name "earth")))
   )
