@@ -21,8 +21,8 @@
 (defn -main 
   []
   ;(i/to_csv filename [mercury venus earth mars jupiter saturn uranus neptune]) 
-  (def planet-data (r/read-csv filename))
-  (def planets (map r/planet-map (rest planet-data)))
-  (r/planet-search planets 2)
+  (def planets (r/read-csv filename))
+  (println (r/planet-search planets 1))
+  (println (r/planet-search planets 2))
   (println (site/open_site (site/site_name "earth")))
   )

@@ -2,32 +2,39 @@
   (:gen-class)
   (:require [clojure.data.csv :as csv]
             [clojure.java.io :as io]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [planets.planets :as planets]))
 
+; aqui eu vou fazer um mapa, assim eu posso transformar cada linha em um mapa 
+
+(defn parse-planet [line]
+  (let[[id name diameter mass gravity distance rotation orbit moons feature facts] line]
+   {
+    :id (Integer. id)
+    :name name 
+    :diameter (Double. diameter)
+    :mass (Double. mass)
+    :gravity (Double. gravity)
+    :distance (Double. distance)
+    :rotation (Double. rotation)
+    :orbit (Double. orbit)
+    :moons (Integer. moons)
+    :feature feature
+    :facts facts
+    }))
 
 (defn read-csv
   [filename]
-  (with-open [reader (io/reader filename)]
+  (with-open [file (io/reader filename)]
     (doall
-     (csv/read-csv reader))))
+     (map parse-planet (rest (csv/read-csv file))))))
 
 
-(defn planet-map [row]
-  (let [[id name diameter mass gravity distance rotation orbit moons features facts] row]
-    {:id id
-     :name name
-     :diameter diameter
-     :mass mass
-     :gravity gravity
-     :distance-from-sun distance
-     :rotation-period rotation
-     :orbit-period orbit
-     :moons moons
-     :geographic-features (str/split features #", ")
-     :fun-facts (str/split facts #", ")}))
 
 (defn planet-search
-  [planets id-planet] 
-  ;(println "planets:" planets) ; Imprime os planetas para depuração
-  ;(println "id-planet:" id-planet) ; Imprime o ID do planeta para depuração
-  (println (filter #(= id-planet (:id %)) planets)))
+  [planets id-planet]
+  (let [result (first (filter #(= id-planet (:id %)) planets))]
+    (if result
+      (str "Name: " (:name result))
+      "Não encontrado!")))
+
