@@ -21,11 +21,16 @@
 
 (defn -main
   []
-  ;(i/to_csv filename [mercury venus earth mars jupiter saturn uranus neptune]) 
+  (i/to_csv filename [mercury venus earth mars jupiter saturn uranus neptune]) 
   (def planets (r/read-csv filename))
+
+
   (println "Enter with  some planet id ")
   (def planet-id (read-line))
   (println (r/planet-search planets (Integer. planet-id)))
+  
+  
+  
   (println "Insert the name of the planet if you want to open the web-site")
   (def planet-name (read-line))
   (if (empty? (str/trim planet-name))
