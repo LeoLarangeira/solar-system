@@ -3,7 +3,8 @@
    (:require [planets.planets :as planets]
              [utils.inserts :as i]
              [utils.read :as r]
-             [utils.site :as site]))
+             [utils.site :as site]
+             [clojure.string :as str]))
 
 
 ;; definindo o nome do arquivo 
@@ -18,11 +19,16 @@
 (def uranus (planets/->planet 7 "Uranus" 50724 8.7e25 8.69 19.22 0.72 30687 27 ["Uranus's axial tilt" "Rings of Uranus"] []))
 (def neptune (planets/->planet 8 "Neptune" 49244 1.02e26 11.15 30.05 0.67 60190 14 ["Great Dark Spot" "Neptune's rings"] []))
 
-(defn -main 
+(defn -main
   []
   ;(i/to_csv filename [mercury venus earth mars jupiter saturn uranus neptune]) 
   (def planets (r/read-csv filename))
-  (println (r/planet-search planets 1))
-  (println (r/planet-search planets 2))
-  (println (site/open_site (site/site_name "earth")))
+  (println "Enter with  some planet id ")
+  (def planet-id (read-line))
+  (println (r/planet-search planets (Integer. planet-id)))
+  (println "Insert the name of the planet if you want to open the web-site")
+  (def planet-name (read-line))
+  (if (empty? (str/trim planet-name))
+    (println "No planet name provided, skipping...")
+    (println (site/open_site (site/site_name planet-name))))
   )

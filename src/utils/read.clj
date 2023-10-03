@@ -35,6 +35,6 @@
   [planets id-planet]
   (let [result (first (filter #(= id-planet (:id %)) planets))]
     (if result
-      (str "Name: " (:name result))
+      (str "Name: " (:name result) " || greographic features: " (:feature result) " || fun facts:" (:facts result))
       "Não encontrado!")))
 
