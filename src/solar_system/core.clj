@@ -19,6 +19,21 @@
 (def uranus (planets/->planet 7 "Uranus" 50724 8.7e25 8.69 19.22 0.72 30687 27 ["Uranus's axial tilt" "Rings of Uranus"] []))
 (def neptune (planets/->planet 8 "Neptune" 49244 1.02e26 11.15 30.05 0.67 60190 14 ["Great Dark Spot" "Neptune's rings"] []))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (defn -main
   []
   (i/to_csv filename [mercury venus earth mars jupiter saturn uranus neptune]) 
